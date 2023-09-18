@@ -5,6 +5,13 @@ terraform {
       version = "~> 4.0"
     }
   }
+
+  backend "s3" {
+    bucket = "amirk-tf-backend"
+    key    = "full-Deployment/terraform.state"
+    region = "us-east-1"
+  }
+
 }
 
 provider "aws" {

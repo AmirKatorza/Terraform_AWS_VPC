@@ -12,3 +12,5 @@ curl -fsSL https://get.docker.com | sh &&
 # Add the uid=1000 user to "docker" group
 sudo groupadd docker 
 sudo usermod -aG docker $(id --user 1000 --name)
+docker pull adongy/hostname-docker
+docker run -p 80:3000 adongy/hostname-docker
